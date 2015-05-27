@@ -8,6 +8,8 @@ Thermostat.prototype.pressDecrease = function() {
 
 Thermostat.prototype.pressResetTherm = function() {
   this.resetTherm()
+  document.getElementById('psm_on').checked = true;
+  document.getElementById('psm_off').checked = false;
 }
 
 Thermostat.prototype.pressPowerSaveButton = function() {

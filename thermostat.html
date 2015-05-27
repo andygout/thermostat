@@ -5,10 +5,14 @@
   </head>
   <body>
 
-    <button type="button" onclick="thermostat.pressIncrease(), thermostat.update()">Increase</button>
-    <button type="button" onclick="thermostat.pressDecrease(), thermostat.update()">Decrease</button>
-    <button type="button" onclick="thermostat.pressResetTherm(), thermostat.update()">Reset</button>
-    <button type="button" onclick="thermostat.pressPowerSaveButton(), thermostat.update()">Power Save</button>
+    <button type="button" onclick="thermostat.pressIncrease(), thermostat.update()">Increase</button></br>
+    <button type="button" onclick="thermostat.pressDecrease(), thermostat.update()">Decrease</button></br>
+    <button type="button" onclick="thermostat.pressResetTherm(), thermostat.update()">Reset</button></br></br>
+
+    <div id="power_save">Power Save Mode</br>
+      <input checked type="radio" name="choice" value="on" id="psm_on" onclick="thermostat.pressPowerSaveButton(), thermostat.update()"/> ON</br>
+      <input type="radio" name="choice" value="off" id="psm_off" onclick="thermostat.pressPowerSaveButton(), thermostat.update()"/> OFF</br></br>
+    </div>
 
     <div id='display'>
       20
