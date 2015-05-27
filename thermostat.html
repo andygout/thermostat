@@ -5,10 +5,10 @@
   </head>
   <body>
 
-    <button type="button" onclick="thermostat.pressIncrease()">Increase</button>
-    <button type="button" onclick="thermostat.pressDecrease()">Decrease</button>
-    <button type="button" onclick="thermostat.pressResetTherm()">Reset</button>
-    <button type="button" onclick="thermostat.pressPowerSaveButton()">Power Save</button>
+    <button type="button" onclick="thermostat.pressIncrease(), thermostat.update()">Increase</button>
+    <button type="button" onclick="thermostat.pressDecrease(), thermostat.update()">Decrease</button>
+    <button type="button" onclick="thermostat.pressResetTherm(), thermostat.update()">Reset</button>
+    <button type="button" onclick="thermostat.pressPowerSaveButton(), thermostat.update()">Power Save</button>
 
     <div id='display'>
       20
