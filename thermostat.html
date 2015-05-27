@@ -1,7 +1,17 @@
-<head>
-  <script src="./src/Thermostat.js"></script>
-</head>
+<html>
+  <head>
+    <script src="./src/Thermostat.js"></script>
+  </head>
+  <body>
 
-<div id='display'>
+    <button type="button" onclick="thermostat.increase()">Increase</button>
+    <button type="button" onclick="thermostat.decrease()">Decrease</button>
+    <button type="button" onclick="thermostat.resetTherm()">Reset</button>
+    <button type="button" onclick="thermostat.powerSaveButton()">Power Save</button>
 
-</div>
+    <div id='display'>
+      20
+    </div>
+
+  </body>
+</html>

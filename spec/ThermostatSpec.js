@@ -51,7 +51,7 @@ describe('Thermostat', function(){
       expect(thermostat.powerSave).toBe(true);
     });
 
-    it('reset temp and will set temp to 25°C if above 25°C', function() {
+    it('power save mode and will set temp to 25°C if above 25°C', function() {
       thermostat.powerSaveButton()
       thermostat.temp = 26
       thermostat.powerSaveButton()
