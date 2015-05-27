@@ -1,3 +1,12 @@
+window.onload = function WindowLoad(event) {
+  if(thermostat.powerSave === true) {
+    document.getElementById('psm_on').checked = true;
+  }
+  else {
+    document.getElementById('psm_off').checked = true;
+  };
+};
+
 Thermostat.prototype.pressIncrease = function() {
   this.increase()
 }
