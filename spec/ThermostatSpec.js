@@ -42,16 +42,16 @@ describe('Thermostat', function(){
       expect(thermostat.maxTemp).toBe(25);
     });
 
-  });
+    it('reset temp to 20°C and max temp to 25°C', function() {
+      thermostat.increase()
+      thermostat.powerSaveButton()
+      thermostat.resetTherm()
+      expect(thermostat.temp).toBe(20);
+      expect(thermostat.maxTemp).toBe(25);
+      expect(thermostat.powerSave).toBe(true);
+    });
 
-  // describe('press reset button', function() {
-  //   it('reset temp to 20°C and max temp to 25°C', function() {
-  //     thermostat.increase()
-  //     thermostat.resetTherm()
-  //     expect(thermostat.temp).toBe(20);
-  //     expect(thermostat.maxTemp).toBe(25);
-  //   });
-  // });
+  });
 
 });
 
