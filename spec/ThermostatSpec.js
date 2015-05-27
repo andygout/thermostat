@@ -51,6 +51,33 @@ describe('Thermostat', function(){
       expect(thermostat.powerSave).toBe(true);
     });
 
+    it('reset temp and will set temp to 25°C if above 25°C', function() {
+      thermostat.powerSaveButton()
+      thermostat.temp = 26
+      thermostat.powerSaveButton()
+      expect(thermostat.temp).toBe(25);
+    })
+  });
+
+  describe('does not allow', function() {
+    it('temp to go below minimum temp', function() {
+      thermostat.temp = 10
+      thermostat.decrease()
+      expect(thermostat.temp).toBe(10)
+    });
+
+    it('temp to go above max temp (power saver mode on)', function() {
+      thermostat.temp = 25
+      thermostat.increase()
+      expect(thermostat.temp).toBe(25)
+    });
+
+    it('temp to go above max temp (power saver mode off)', function() {
+      thermostat.powerSaveButton()
+      thermostat.temp = 32
+      thermostat.increase()
+      expect(thermostat.temp).toBe(32)
+    });
   });
 
 });

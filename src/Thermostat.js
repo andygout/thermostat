@@ -8,11 +8,15 @@ function Thermostat () {
 };
 
 Thermostat.prototype.increase = function() {
-  this.temp += 1
+  if((this.powerSave === true && this.temp < 25) || (this.powerSave === false && this.temp < 32)) {
+    this.temp += 1
+  }
 };
 
 Thermostat.prototype.decrease = function() {
-  this.temp -= 1
+  if(this.temp > 10) {
+    this.temp -= 1
+  }
 };
 
 Thermostat.prototype.resetTherm = function() {
@@ -29,37 +33,6 @@ Thermostat.prototype.powerSaveButton = function() {
   else {
     this.maxTemp = 25;
     this.powerSave = true;
+    this.temp = 25;
   }
 };
-
-
-// var Javabuzz = function () {};
-
-// Javabuzz.prototype._isDivisibleBy = function(number, divisor) {
-//   return (number % divisor === 0);
-// };
-
-// Javabuzz.prototype.isDivisibleByFifteen = function(number) {
-//   return (this._isDivisibleBy(number, 15));
-// };
-
-// Javabuzz.prototype.isDivisibleByFive = function(number) {
-//   return (this._isDivisibleBy(number, 5));
-// };
-
-// Javabuzz.prototype.isDivisibleByThree = function(number) {
-//   return (this._isDivisibleBy(number, 3));
-// };
-
-// Javabuzz.prototype.says = function(number) {
-//   if (this.isDivisibleByFifteen(number)) {
-//     return "Javabuzz";
-//   }
-//   if (this.isDivisibleByFive(number)) {
-//     return "Buzz";
-//   }
-//   if (this.isDivisibleByThree(number)) {
-//     return "Java";
-//   }
-//   return number;
-// };
