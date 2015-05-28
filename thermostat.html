@@ -1,7 +1,7 @@
 <html>
   <head>
     <script src="./src/Thermostat.js"></script>
-    <script src="./src/Helpers.js"></script>
+    <script src="./src/App.js"></script>
   </head>
   <style>
   body {background: #FFFF66;}
@@ -9,13 +9,13 @@
 
   <body>
 
-    <button type="button" onclick="thermostat.pressIncrease(), thermostat.update()">&uarr;</button>
-    <button type="button" onclick="thermostat.pressDecrease(), thermostat.update()">&darr;</button></br></br>
-    <button type="button" onclick="thermostat.pressResetTherm(), thermostat.update()">Reset</button></br></br>
+    <button type="button" onclick="pressIncrease()">&uarr;</button>
+    <button type="button" onclick="pressDecrease()">&darr;</button></br></br>
+    <button type="button" onclick="pressResetTherm()">Reset</button></br></br>
 
     <div id="power_save">Power Save Mode</br>
-      <input type="radio" name="choice" value="on" id="psm_on" onclick="thermostat.pressPowerSaveButton(), thermostat.update()"/> ON</br>
-      <input type="radio" name="choice" value="off" id="psm_off" onclick="thermostat.pressPowerSaveButton(), thermostat.update()"/> OFF</br></br>
+      <input type="radio" name="choice" value="on" id="psm_on" onclick="pressPowerSaveButton()"/> ON</br>
+      <input type="radio" name="choice" value="off" id="psm_off" onclick="pressPowerSaveButton()"/> OFF</br></br>
     </div>
 
     <div id='display'>

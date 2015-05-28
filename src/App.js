@@ -1,3 +1,5 @@
+thermostat = new Thermostat
+
 window.onload = function WindowLoad(event) {
   if(thermostat.powerSave === true) {
     document.getElementById('psm_on').checked = true;
@@ -7,26 +9,34 @@ window.onload = function WindowLoad(event) {
   };
 };
 
-Thermostat.prototype.pressIncrease = function() {
-  this.increase()
+function pressIncrease() {
+  thermostat.increase();
+  update();
 }
 
-Thermostat.prototype.pressDecrease = function() {
-  this.decrease()
+function pressDecrease() {
+  thermostat.decrease();
+  update();
 }
 
-Thermostat.prototype.pressResetTherm = function() {
-  this.resetTherm()
+function pressResetTherm() {
+  thermostat.resetTherm();
   document.getElementById('psm_on').checked = true;
   document.getElementById('psm_off').checked = false;
+  update();
 }
 
-Thermostat.prototype.pressPowerSaveButton = function() {
-  this.powerSaveButton()
+function pressPowerSaveButton() {
+  thermostat.powerSaveButton();
+  update();
 }
 
-Thermostat.prototype.update = function() {
+function update() {
   document.getElementById('display').innerHTML = thermostat.temp;
+  bg_update();
+}
+
+function bg_update() {
   var bg;
   switch (thermostat.temp) {
     case 10: bg = "#006600"; break;
