@@ -31,6 +31,9 @@ Thermostat.prototype.powerSaveButton = function() {
   else {
     this.maxTemp = 25;
     this.powerSave = true;
-    this.temp = 25;
+    if(this.temp > 25)
+    {
+      this.temp = 25;
+    }
   }
 };
