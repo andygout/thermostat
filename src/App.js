@@ -8,6 +8,7 @@ window.onload = function WindowLoad(event) {
     document.getElementById('psm_off').checked = true;
   };
   document.getElementById('display').innerHTML = thermostat.temp
+  displayCity();
 };
 
 function pressIncrease() {

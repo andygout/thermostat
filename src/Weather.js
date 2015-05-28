@@ -1,4 +1,4 @@
-window.onload = function WindowLoad(event) {
+function displayCity() {
   var xmlhttp = new XMLHttpRequest();
   var url = "http://api.openweathermap.org/data/2.5/find?q=Seoul";
 
