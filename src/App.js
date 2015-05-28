@@ -8,7 +8,7 @@ window.onload = function WindowLoad(event) {
     document.getElementById('psm_off').checked = true;
   };
   document.getElementById('display').innerHTML = thermostat.temp
-  displayCity();
+  displayCity('London');
 };
 
 function pressIncrease() {
@@ -36,6 +36,11 @@ function pressPowerSaveButton() {
 function update() {
   document.getElementById('display').innerHTML = thermostat.temp;
   bg_update();
+}
+
+function updateCityInfo() {
+  var city = document.getElementById('newcity').value;
+  displayCity(city);
 }
 
 function bg_update() {
